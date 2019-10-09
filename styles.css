@@ -5,82 +5,41 @@ body {
   overflow-x : auto;
 }
 
+.grid-container{
+  display: grid;
+  grid-template-areas: 
+    'header'
+    'sidebar'
+    'body';
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 20% auto auto;
+  grid-gap: 30px;
+  
+}
 
-h1{
+
+.header{
+  display:flex;
+  background-color: pink;
+  border:solid;
   color: red;
   border-style: solid;
-  border-width: 5px;
-}
-
-
-.border {
-  display: flex;
   background-color: pink;
-  text-align: center;
-}
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  justify-content: center;
+  align-self: center;
 
 
-.border < div{
-  background-color: pink;
-  width: 110px;
-  margin: 10px;
-  text-align: center;
-  line-height: 80px;
-  font-size: 20px;
-  left: 130;
-}
-
-.row {
-  width: 100%;
-}
-.text-in-flex {
-  background: tomato;
-  padding: 5px;
-  width: 200px;
-  height: 150px;
-  margin: 10px;
-  line-height: 150px;
-  color: white;
-  font-weight: bold;
-  font-size: 3em;
-  text-align: center;
 }
 
 
 .sidebar {
-  height: 80%;
-  width: 270px;
-  position: fixed;
-  z-index: 1;
-  top: 150;
-  left: 130;
   background-color: grey;
-  overflow-x: hidden;
-}
-
-
-.sidebar a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  color: black;
-  display: block;
-}
-
-
-.sidebar a:hover {
-  color: blue;
-}
-
-
-.main {
-  margin-left: 160px;   
-  padding: 0px 10px;
-}
-
-
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
+  grid-row-start: 2;
+  grid-column-start: 1;
+  width: 350px;
 }
 
 
@@ -89,73 +48,33 @@ img {
 }
 
 
-.body{
-  height: 80%;
-  width: 1000px;
+.bio{
+  /*height: 80%;
   position: fixed;
   z-index: 1;
   top: 140;
-  left: 500;
-  background-color: white;
-  overflow-x: hidden;
+  left: 500;*/
+  background-color: #F5FCFF;
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 
 .column1 {
   display: flex;
   flex-wrap: nowrap;
-  background-color: white;
+  background-color: #F5FCFF;
 }
 
 
 .column1 > div {
-  background-color: white;
+  background-color: #F5FCFF;
   width: 300px;
   margin: 10px;
   text-align: left;
   line-height: 30px;
   font-size: 17px;
-}
-
-
-.column2 {
-  display: flex;
-  flex-wrap: nowrap;
-  background-color: white;
-}
-
-
-.column2 > div {
-  background-color: white;
-  width: 300px;
-  margin: 10px;
-  text-align: left;
-  line-height: 30px;
-  font-size: 17px;
-}
-
-
-.column3 {
-  display: flex;
-  flex-wrap: nowrap;
-  background-color: white;
-}
-
-
-.column3 > div {
-  background-color: white;
-  width: 300px;
-  margin: 10px;
-  text-align: left;
-  line-height: 30px;
-  font-size: 17px;
-}
-
-
-.icon {
-  display: flex;
-  flex-wrap: nowrap;
-  background-color: grey;
 }
 
 
